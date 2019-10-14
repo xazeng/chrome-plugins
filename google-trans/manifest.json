@@ -1,0 +1,12 @@
+{
+  "name": "google-translate context menu plugin",
+  "description": "select text then right click",
+  "version": "0.2",
+  "permissions": ["contextMenus", "tabs"],
+  "icons": {"16": "icon16.png", "48": "icon48.png", "128": "icon128.png"},
+  "background": {
+    "persistent": false,
+    "scripts": ["google_trans.js"]
+  },
+  "manifest_version": 2
+}
