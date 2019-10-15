@@ -6,8 +6,16 @@
 function onClickHandler(info, tab) {
 	// alert(JSON.stringify(info));
     var url = "https://www.baidu.com/s?ie=UTF-8&wd=" + encodeURI(info.selectionText);
-  chrome.tabs.query({active:true}, function(tabs){
-	    chrome.tabs.create({ url: url, index: tabs[0].index+1, openerTabId:tabs[0].id });
+  chrome.tabs.query({active:true, highlighted: true}, function(tabs){
+    chrome.windows.getLastFocused(null, function(win){
+      for(i in tabs) {
+        var t = tabs[i];
+        if (t.windowId == win.id) {
+           chrome.tabs.create({ url: url, index: t.index+1, openerTabId:t.id });
+           break;
+          }
+      }
+    });
   });
 };
 
