@@ -1,8 +1,8 @@
 {
-  "name": "google-translate context menu plugin",
-  "description": "select text then right click",
-  "version": "0.3",
-  "permissions": ["contextMenus", "tabs"],
+  "name": "translate to local language",
+  "description": "select text and right click it, then you will see the menu",
+  "version": "0.5",
+  "permissions": ["contextMenus"],
   "icons": {"16": "icon16.png", "48": "icon48.png", "128": "icon128.png"},
   "background": {
     "persistent": false,
