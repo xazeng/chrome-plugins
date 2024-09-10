@@ -4,7 +4,7 @@
 
 // The onClicked callback function.
 function onClickHandler(info, tab) {
-  var url = "https://translate.google.cn/#auto/" + chrome.i18n.getUILanguage() + "/" + encodeURI(info.selectionText);
+  var url = "https://translate.google.com/#auto/" + chrome.i18n.getUILanguage() + "/" + encodeURI(info.selectionText);
 	chrome.windows.create({ url: url, width: 736, height: 860, left: 592 });
   // chrome.tabs.query({ active: true }, function (tabs) { chrome.tabs.create({ url: url, index: tabs[0].index + 1, openerTabId: tabs[0].id }); });
 };
@@ -15,7 +15,7 @@ chrome.contextMenus.onClicked.addListener(onClickHandler);
 chrome.runtime.onInstalled.addListener(function() {
   // Create one test item for each context type.
   
-  chrome.contextMenus.create({"title":"google trans '%s'", "contexts":["selection"], "id": "context-selection"});
+  chrome.contextMenus.create({"title":"谷歌翻译 '%s'", "contexts":["selection"], "id": "context-selection"});
 
 });
 

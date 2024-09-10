@@ -5,8 +5,8 @@
 // The onClicked callback function.
 function onClickHandler(info, tab) {
 	// alert(JSON.stringify(info));
-  var url = "http://dict.youdao.com/search?q=" + encodeURI(info.selectionText) + "&keyfrom=dict.index";
-	chrome.windows.create({ url: url, width: 736, height: 860, left: 592 });
+  var url = "http://dict.youdao.com/result?word=" + encodeURI(info.selectionText) + "&lang=en";
+	chrome.windows.create({ url: url, width: 815, height: 860, left: 500 });
   // chrome.tabs.query({active:true}, function(tabs){ chrome.tabs.create({ url: url, index: tabs[0].index+1, openerTabId:tabs[0].id }); });
 };
 

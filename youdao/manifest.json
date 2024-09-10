@@ -1,12 +1,11 @@
 {
   "name": "右键有道翻译插件",
-  "description": "选中文本，右键。",
-  "version": "0.5",
+  "description": "选中文本，右键，有道翻译",
+  "version": "0.8",
   "permissions": ["contextMenus"],
   "icons": {"16": "icon16.png", "48": "icon48.png", "128": "icon128.png"},
   "background": {
-    "persistent": false,
-    "scripts": ["youdao.js"]
+    "service_worker": "youdao.js"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
